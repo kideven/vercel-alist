@@ -1,3 +1,4 @@
 FROM docker.io/xhofe/alist:latest
 EXPOSE 5244
-CMD ["/bin/sh", "-c", "PORT=${PORT:-5244} /alist server --no-prefix --port ${PORT}"]
+WORKDIR /opt/alist
+CMD ["/bin/sh", "-c", "./alist server --no-prefix --port ${PORT:-5244}"]
