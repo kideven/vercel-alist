@@ -1,0 +1,4 @@
+FROM docker.io/xhofe/alist:latest
+EXPOSE 5244
+ENV PORT=5244
+CMD ["/alist", "server", "--no-prefix"]
