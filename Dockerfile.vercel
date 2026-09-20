@@ -1,4 +1,5 @@
 FROM docker.io/xhofe/alist:latest
 EXPOSE 5244
 WORKDIR /opt/alist
-CMD ["/bin/sh", "-c", "./alist server --no-prefix --force-bin-dir"]
+CMD ["/bin/sh", "-c", "HTTP_PORT=$PORT ./alist server --no-prefix --force-bin-dir"]
+
